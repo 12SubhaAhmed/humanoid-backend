@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+requests
+python-dotenv
+qdrant-client
+cohere
