@@ -5,6 +5,10 @@ from agent import answer
 
 app = FastAPI()
 
+@app.get("/")
+def home():
+    return {"status": "Humanoid Backend is running 🚀"}
+    
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],      
@@ -22,3 +26,4 @@ async def ask_question(q: Question):
     return {
         "answer": result.get("answer", "I don't know")
     }
+
