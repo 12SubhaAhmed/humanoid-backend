@@ -13,7 +13,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000",
         "http://localhost:5173",
-        "https://hackathon-2025-6nha2r6gr-subha-sajjads-projects.vercel.app/"],      
+        "https://hackathon-2025-6nha2r6gr-subha-sajjads-projects.vercel.app"],      
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -28,6 +28,7 @@ async def ask_question(q: Question):
     return {
         "answer": result.get("answer", "I don't know")
     }
+
 
 
 
