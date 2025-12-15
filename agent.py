@@ -63,9 +63,9 @@ def answer(question: str):
     # Step 2 — Prepare prompt with real RAG context
     prompt = (
     f"You are an AI tutor for the Physical AI & Humanoid Robotics textbook.\n"
-    f"Use ONLY the retrieved content below to answer.\n"
+    f"Prefer using the retrieved content below when it is relevant.\n"
+    f"If the context does not contain the answer, reply normally using your general knowledge.\n\n"
     f"Write the answer in **3–5 complete sentences**, fully explaining the concept.\n"
-    f"If the answer is not in the retrieved content, reply: 'I don't know'.\n\n"
     f"### Retrieved Content:\n{retrieved_text}\n\n"
     f"### Question:\n{question}\n\n"
     f"### Answer:"
@@ -83,3 +83,4 @@ def answer(question: str):
     return {
         "answer": response.text.strip()
     }
+
