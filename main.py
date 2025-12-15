@@ -26,8 +26,9 @@ async def ask_question(q: Question):
     result = answer(q.query)
 
     return {
-        "answer": result.get("answer", "I don't know")
+        "answer": result.get("answer") or "Let me think about that and help you."
     }
+
 
 
 
